@@ -28,11 +28,17 @@ public class FileConversionConstants {
 
 	public static final String JSON_INPUT_VO = "DynamicJsonInVO";
 	
-	public static final String UTILITY_PATH="C:\\Users\\p.nana.ghorpade";
+	// public static String UTILITY_PATH="C:\\Users\\p.nana.ghorpade";
+	public static String UTILITY_PATH = getPath();
 	
 	public static final String LIB_PATH = UTILITY_PATH + "\\FileConversion\\tool\\jdk1.8.0_91\\bin\\FileConvert_lib\\target-classes";
 	
 	public static final String BATCH_JAR_PATH = UTILITY_PATH + "\\FileConversion\\tool\\jdk1.8.0_91\\bin\\RunBatch.jar";
+	
+	public static String getPath(){
+		String workingHomeDir = System.getProperty("user.home");
+		return workingHomeDir;
+	}
 	
 	
 }
